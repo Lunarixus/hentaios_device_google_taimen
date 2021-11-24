@@ -18,6 +18,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+# All components inherited here go to product image
+#
+$(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
 
 $(call inherit-product, device/google/taimen/device.mk)
 $(call inherit-product, vendor/google/taimen/taimen-vendor.mk)
@@ -34,7 +37,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/aosp_excluded_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/aosp_excluded_hardware.xml
 
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
-PRODUCT_NAME := aosp_taimen
+PRODUCT_BRAND := google
+PRODUCT_NAME := hentai_taimen
 PRODUCT_DEVICE := taimen
-PRODUCT_MODEL := AOSP on taimen
+PRODUCT_MODEL := Pixel 2 XL
