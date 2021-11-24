@@ -16,7 +16,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/hentai_taimen.mk \
-    $(LOCAL_DIR)/aosp_taimen_hwasan.mk \
 
 COMMON_LUNCH_CHOICES := \
     hentai_taimen-userdebug

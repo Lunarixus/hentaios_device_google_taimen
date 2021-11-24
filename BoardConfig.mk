@@ -25,15 +25,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 41943040
 BOARD_AVB_ENABLE := true
 
 # Kernel modules
-ifeq (,$(filter-out taimen_kasan, $(TARGET_PRODUCT)))
-# if TARGET_PRODUCT == taimen_kasan
-BOARD_VENDOR_KERNEL_MODULES += \
-    device/google/wahoo-kernel/kasan/touch_core_base.ko \
-    device/google/wahoo-kernel/kasan/ftm4.ko \
-    device/google/wahoo-kernel/kasan/sw49408.ko \
-    device/google/wahoo-kernel/kasan/lge_battery.ko \
-    device/google/wahoo-kernel/kasan/wlan.ko
-else ifeq (,$(filter-out taimen_kernel_debug_memory, $(TARGET_PRODUCT)))
+ifeq (,$(filter-out taimen_kernel_debug_memory, $(TARGET_PRODUCT)))
 # if TARGET == taimen_kernel_debug_memory
 BOARD_VENDOR_KERNEL_MODULES += \
     device/google/wahoo-kernel/debug_memory/touch_core_base.ko \
